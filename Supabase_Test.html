@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- __V3D_PUZZLES__ - enable Puzzles button in the App Manager -->
+<!-- __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated -->
+<html lang="en">
+<head>
+  <title>Verge3D Web Interactive</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+
+  <!-- Search Engines -->
+  <meta name="description" content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the art WebGL and HTML5 technologies.">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Verge3D Web Interactive">
+  <meta property="og:description" content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the art WebGL and HTML5 technologies.">
+  <meta property="og:image" content="https://cdn.soft8soft.com/images/player_socials.jpg">
+  <meta property="og:type" content="website">
+
+  <meta name="generator" content="Verge3D 4.13.0">
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="media/favicon-48x48.png">
+  <link rel="manifest" href="media/manifest.json">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Модальное окно управления станком (появляется по клику на пилораму) -->
+<div id="saw-modal" class="modal-overlay hidden">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h2 id="modal-saw-name">SM_Saw_01</h2>
+      <button id="close-modal-btn" class="close-btn">&times;</button>
+    </div>
+
+    <div id="modal-status-badge" class="status-badge">Статус: Работает</div>
+
+    <!-- Кнопки остановки (видны, если станок работает) -->
+    <div id="stop-controls" class="controls-group">
+      <p class="controls-label">Остановить станок. Укажите причину:</p>
+      <button class="action-btn btn-saw" data-reason="Замена пил">Замена пил</button>
+      <button class="action-btn btn-repair" data-reason="Ремонт">Ремонт</button>
+      <button class="action-btn btn-idle" data-reason="Простой">Простой</button>
+    </div>
+
+    <!-- Кнопка запуска (видна, если станок остановлен) -->
+    <div id="start-controls" class="controls-group hidden">
+      <p id="current-reason-text" class="controls-label">Причина: —</p>
+      <button id="btn-start-saw" class="action-btn btn-run">Запустить станок</button>
+    </div>
+  </div>
+</div>
+
+  <script src="v3d.js"></script>
+  <script src="Supabase_Test.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <link rel="stylesheet" type="text/css" href="Supabase_Test.css">
+</head>
+
+<body>
+  <noscript>Your browser does not support JavaScript, that's why this Verge3D app could not be loaded. Try another browser or contact the <a href="https://www.soft8soft.com">developers</a> for help.</noscript>
+
+  <div id="v3d-container">
+    <div id="fullscreen-button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div>
+  </div>
+
+  <!-- Панель краткой статистики в углу экрана -->
+<div id="stats-panel" class="stats-panel">
+  <div class="stats-title">Статистика простоев (сегодня)</div>
+  <div id="stats-content">Загрузка...</div>
+</div>
+
+
+
+</body>
+
+</html>

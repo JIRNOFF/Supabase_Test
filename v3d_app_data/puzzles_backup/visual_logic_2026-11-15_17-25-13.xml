@@ -1,0 +1,58 @@
+<xml xmlns="https://www.soft8soft.com/puzzles/xml">
+  <tab name="Init" type="InitTab" active="false" scrollx="20" scrolly="20" scale="0.9"></tab>
+  <tab name="Main" type="CommonTab" active="true" scrollx="-28.111114501952898" scrolly="-12.222223281860465" scale="1">
+    <block type="whenClicked" id="ZwyV5CbPsH_]*:XP!v`V" inline="false" x="190" y="90">
+      <mutation adveventoptions="false" enableifmissed="false" useid="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="ZNIc{@AS2U7*B8s_UZWa">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+        <block type="lists_create_with" id="9Syra*q{U`oU|ia5msdR">
+          <mutation items="5"></mutation>
+          <value name="ADD0">
+            <block type="text" id="%hdc+WIQ)hc$P#i_6tb,">
+              <field name="TEXT">SM_Saw_01</field>
+            </block>
+          </value>
+          <value name="ADD1">
+            <block type="text" id="H#f)Ln`#Zb~5oF$K.(2@">
+              <field name="TEXT">SM_Saw_02</field>
+            </block>
+          </value>
+          <value name="ADD2">
+            <block type="text" id="1@(;-AddL#box4w9?2$3">
+              <field name="TEXT">SM_Saw_03</field>
+            </block>
+          </value>
+          <value name="ADD3">
+            <block type="text" id="yREW{4+epSvltvCL9/-q">
+              <field name="TEXT">SM_Saw_04</field>
+            </block>
+          </value>
+          <value name="ADD4">
+            <block type="text" id="$D[d?6:kBLsc@`zZrJ,]">
+              <field name="TEXT">SM_Saw_05</field>
+            </block>
+          </value>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="callJSFunction" id="iQYemI#.t(/5[U$REKVn">
+          <mutation name="openSawMenu">
+            <arg name="x"></arg>
+          </mutation>
+          <field name="NAME">openSawMenu</field>
+          <value name="ARG0">
+            <block type="pickedObject" id="CVCUYG19`VzA2}bG]-Dt"></block>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1134" viewport-y="37" viewport-w="768" viewport-h="447" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

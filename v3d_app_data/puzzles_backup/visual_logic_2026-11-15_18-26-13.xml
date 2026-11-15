@@ -1,0 +1,235 @@
+<xml xmlns="https://www.soft8soft.com/puzzles/xml">
+  <tab name="Init" type="InitTab" active="false" scrollx="20" scrolly="0" scale="0.9"></tab>
+  <tab name="Main" type="CommonTab" active="true" scrollx="-86.86411789917588" scrolly="295.2398376464844" scale="1">
+    <variables>
+      <variable id="C:=lFIdPH^W7$eZr*yBb">sawId</variable>
+      <variable id="z4%L)4(dgqH#{?2Ii[id">status</variable>
+      <variable id="QB;/i{0L[Ylx~ymb]VOT">reason</variable>
+    </variables>
+    <block type="addAnnotation" id="HlY)dr(7-L#e-joXarbo" x="170" y="-210">
+      <mutation usenameslot="false"></mutation>
+      <value name="ANNOTATION">
+        <shadow type="text" id="(7z~!@8D!daKkm@p9gWE">
+          <field name="TEXT">1</field>
+        </shadow>
+      </value>
+      <value name="TARGET">
+        <shadow type="objectList" id="~TgSy(P+db4!?P:~R|h=">
+          <field name="FIELDNAME">SM_Saw_01</field>
+        </shadow>
+      </value>
+      <value name="CONTENTS">
+        <shadow type="text" id="/$9NuuccgDn+C^J6:pLu">
+          <field name="TEXT">Sawmill 1</field>
+        </shadow>
+        <block type="variables_get" id=",!}MGs#rLbS_gS_E1Fw)">
+          <field name="VAR" id="z4%L)4(dgqH#{?2Ii[id">status</field>
+        </block>
+      </value>
+      <value name="ID">
+        <shadow type="text" id="Ow-nDBz5:X}X;~X%Jf|j">
+          <field name="TEXT">Note1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="whenClicked" id="ZwyV5CbPsH_]*:XP!v`V" inline="false" x="190" y="90">
+      <mutation adveventoptions="false" enableifmissed="false" useid="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="ZNIc{@AS2U7*B8s_UZWa">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+        <block type="lists_create_with" id="9Syra*q{U`oU|ia5msdR">
+          <mutation items="5"></mutation>
+          <value name="ADD0">
+            <block type="text" id="%hdc+WIQ)hc$P#i_6tb,">
+              <field name="TEXT">SM_Saw_01</field>
+            </block>
+          </value>
+          <value name="ADD1">
+            <block type="text" id="H#f)Ln`#Zb~5oF$K.(2@">
+              <field name="TEXT">SM_Saw_02</field>
+            </block>
+          </value>
+          <value name="ADD2">
+            <block type="text" id="1@(;-AddL#box4w9?2$3">
+              <field name="TEXT">SM_Saw_03</field>
+            </block>
+          </value>
+          <value name="ADD3">
+            <block type="text" id="yREW{4+epSvltvCL9/-q">
+              <field name="TEXT">SM_Saw_04</field>
+            </block>
+          </value>
+          <value name="ADD4">
+            <block type="text" id="$D[d?6:kBLsc@`zZrJ,]">
+              <field name="TEXT">SM_Saw_05</field>
+            </block>
+          </value>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="callJSFunction" id="iQYemI#.t(/5[U$REKVn">
+          <mutation name="openSawMenu">
+            <arg name="x"></arg>
+          </mutation>
+          <field name="NAME">openSawMenu</field>
+          <value name="ARG0">
+            <block type="pickedObject" id="CVCUYG19`VzA2}bG]-Dt"></block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block type="procedures_defnoreturn" id="2+,Zv`y!W)bWh4?1Wjo|" x="190" y="370">
+      <mutation>
+        <arg name="sawId" varid="C:=lFIdPH^W7$eZr*yBb"></arg>
+        <arg name="status" varid="z4%L)4(dgqH#{?2Ii[id"></arg>
+        <arg name="reason" varid="QB;/i{0L[Ylx~ymb]VOT"></arg>
+      </mutation>
+      <field name="NAME">setSawColor</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="controls_if" id="B7gd(x43}u-EH~]2FboM">
+          <mutation elseif="3"></mutation>
+          <value name="IF0">
+            <block type="logic_compare" id="YT1i,nyYZweIKy+LV2WY">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="*5^2`etv;kpMtm(vV}PU">
+                  <field name="VAR" id="z4%L)4(dgqH#{?2Ii[id">status</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="text" id="(_bzh7_Y79XSK((;RA{_">
+                  <field name="TEXT">running</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="assignMaterial" id="i!TQS|@ZVj?#w^/vgh-:">
+              <mutation usematerialindex="false"></mutation>
+              <value name="VALUE2">
+                <shadow type="materialList" id="7-;x7/pVC/;}fK@z`ov4">
+                  <field name="FIELDNAME">Green</field>
+                </shadow>
+              </value>
+              <value name="VALUE1">
+                <shadow type="objectList" id="wj^fSx[PCe-dN]9gaoZY">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="variables_get" id="Wkq71$!egLwSE|iTrG51">
+                  <field name="VAR" id="C:=lFIdPH^W7$eZr*yBb">sawId</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+          <value name="IF1">
+            <block type="logic_compare" id="c=_P^x{!+Y5At~(%S?Xv">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="Ruews=t@}=Qu3xh?Q;)-">
+                  <field name="VAR" id="QB;/i{0L[Ylx~ymb]VOT">reason</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="text" id="@dR.)AM`YwsYhReodUT)">
+                  <field name="TEXT">Замена пил</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO1">
+            <block type="assignMaterial" id="UMus]`qJ#wYn`y@cCd,n">
+              <mutation usematerialindex="false"></mutation>
+              <value name="VALUE2">
+                <shadow type="materialList" id="`Lqve`-Shh4]ZY$HN?8Y">
+                  <field name="FIELDNAME">Yellow</field>
+                </shadow>
+              </value>
+              <value name="VALUE1">
+                <shadow type="objectList" id="wj^fSx[PCe-dN]9gaoZY">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="variables_get" id="O%2Ly]L4,_c:m]R(xu=W">
+                  <field name="VAR" id="C:=lFIdPH^W7$eZr*yBb">sawId</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+          <value name="IF2">
+            <block type="logic_compare" id="jLUvyx4F5SO0G6=sA9ik">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="wflDPR0bWkTQ(w51FWyw">
+                  <field name="VAR" id="QB;/i{0L[Ylx~ymb]VOT">reason</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="text" id="#Yu.SYBU2Hm[V~Kp=QZ:">
+                  <field name="TEXT">Ремонт</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO2">
+            <block type="assignMaterial" id="1lnTm8*U$ch8QyU/YN|~">
+              <mutation usematerialindex="false"></mutation>
+              <value name="VALUE2">
+                <shadow type="materialList" id="(yU%zPW3R43(=I336dgg">
+                  <field name="FIELDNAME">Red</field>
+                </shadow>
+              </value>
+              <value name="VALUE1">
+                <shadow type="objectList" id="wj^fSx[PCe-dN]9gaoZY">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="variables_get" id="k*0!0Ca4u`udaG;H?g=[">
+                  <field name="VAR" id="C:=lFIdPH^W7$eZr*yBb">sawId</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+          <value name="IF3">
+            <block type="logic_compare" id="P=c!2O?,`qcRi.Tavyt4">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="B`hV${+veuw-EzGv(B}i">
+                  <field name="VAR" id="QB;/i{0L[Ylx~ymb]VOT">reason</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="text" id="0)iyrxGzsAjMa44B`38]">
+                  <field name="TEXT">Простой</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO3">
+            <block type="assignMaterial" id="ONq:MFwi2Ey2WsI`)Rz8">
+              <mutation usematerialindex="false"></mutation>
+              <value name="VALUE2">
+                <shadow type="materialList" id="Cn|]4/Q^!+nBrQ*_@d4C">
+                  <field name="FIELDNAME">Grey</field>
+                </shadow>
+              </value>
+              <value name="VALUE1">
+                <shadow type="objectList" id="wj^fSx[PCe-dN]9gaoZY">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="variables_get" id="y,5DI_aWbz,6(oF`BusC">
+                  <field name="VAR" id="C:=lFIdPH^W7$eZr*yBb">sawId</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1134" viewport-y="37" viewport-w="768" viewport-h="447" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
